@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-display font-bold">Bosal</h3>
             <p className="text-bosal-beige/80 text-sm">
-              Sophisticated Nigerian dining & vibrant culinary experiences in Hilltop, Nsukka.
+              Sophisticated Nigerian dining & vibrant culinary experiences.
             </p>
           </div>
 
