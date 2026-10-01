@@ -11,6 +11,7 @@ const Checkout = () => {
   const [paymentMethod, setPaymentMethod] = useState('card'); // 'card' or 'transfer'
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [confirmedTotal, setConfirmedTotal] = useState(0);
 
   const subtotal = getSubtotal();
   const finalTotal = orderMethod === 'delivery' ? subtotal + deliveryFee : subtotal;
@@ -44,6 +45,7 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsProcessing(true);
+    setConfirmedTotal(finalTotal);
     
     // Simulate payment processing delay
     setTimeout(() => {
@@ -70,10 +72,39 @@ const Checkout = () => {
             <CheckCircle2 className="w-12 h-12 text-bosal-bright-green" />
           </motion.div>
           <h1 className="text-4xl font-display font-bold text-bosal-deep-green mb-4">Order Confirmed!</h1>
+          
           <p className="text-lg text-bosal-deep-green/70 mb-8">
             Thank you for your order. We've received it and are preparing your delicious meals right now. 
             {orderMethod === 'delivery' ? " It will be delivered shortly." : " It will be ready for pickup soon."}
           </p>
+
+          {paymentMethod === 'transfer' && (
+            <div className="bg-bosal-beige/50 border border-bosal-deep-green/10 rounded-2xl p-6 mb-8 text-left">
+              <h3 className="font-bold text-bosal-deep-green mb-4 text-center">Please make your transfer to:</h3>
+              <div className="space-y-3 text-bosal-deep-green/80">
+                <div className="flex justify-between border-b border-bosal-deep-green/5 pb-2">
+                  <span className="font-medium">Bank:</span>
+                  <span className="font-bold">Guaranty Trust Bank (GTB)</span>
+                </div>
+                <div className="flex justify-between border-b border-bosal-deep-green/5 pb-2">
+                  <span className="font-medium">Account Name:</span>
+                  <span className="font-bold">Bosal Stores & Kitchen</span>
+                </div>
+                <div className="flex justify-between border-b border-bosal-deep-green/5 pb-2">
+                  <span className="font-medium">Account Number:</span>
+                  <span className="font-bold font-mono tracking-wider">0123456789</span>
+                </div>
+                <div className="flex justify-between pt-2">
+                  <span className="font-medium">Amount to Transfer:</span>
+                  <span className="font-bold text-bosal-bright-green text-xl">₦{confirmedTotal.toLocaleString()}</span>
+                </div>
+              </div>
+              <p className="text-sm text-bosal-deep-green/60 mt-4 text-center">
+                Your order will be dispatched as soon as the transfer is confirmed.
+              </p>
+            </div>
+          )}
+
           <button 
             onClick={() => navigate('/')}
             className="bg-bosal-deep-green text-bosal-beige px-10 py-4 rounded-full font-bold hover:bg-bosal-bright-green transition-colors"
