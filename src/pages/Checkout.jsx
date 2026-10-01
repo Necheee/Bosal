@@ -71,11 +71,22 @@ const Checkout = () => {
           >
             <CheckCircle2 className="w-12 h-12 text-bosal-bright-green" />
           </motion.div>
-          <h1 className="text-4xl font-display font-bold text-bosal-deep-green mb-4">Order Confirmed!</h1>
+          <h1 className="text-4xl font-display font-bold text-bosal-deep-green mb-4">
+            {paymentMethod === 'card' ? 'Order Confirmed!' : 'Awaiting Payment'}
+          </h1>
           
           <p className="text-lg text-bosal-deep-green/70 mb-8">
-            Thank you for your order. We've received it and are preparing your delicious meals right now. 
-            {orderMethod === 'delivery' ? " It will be delivered shortly." : " It will be ready for pickup soon."}
+            {paymentMethod === 'card' ? (
+              <>
+                Thank you for your order. We've received it and are preparing your delicious meals right now. 
+                {orderMethod === 'delivery' ? " It will be delivered shortly." : " It will be ready for pickup soon."}
+              </>
+            ) : (
+              <>
+                Thank you for placing your order! Please complete your transfer using the details below.
+                {orderMethod === 'delivery' ? " Your meals will be delivered shortly after confirmation." : " Your meals will be prepared for pickup after confirmation."}
+              </>
+            )}
           </p>
 
           {paymentMethod === 'transfer' && (
