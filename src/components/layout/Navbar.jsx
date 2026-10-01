@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
 import { useState } from 'react';
+import useCartStore from '../../store/cartStore';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const items = useCartStore((state) => state.items);
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const links = [
     { name: 'Home', path: '/' },
@@ -42,9 +45,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/cart" className="relative text-bosal-deep-green hover:text-bosal-bright-green transition-colors">
               <ShoppingCart className="w-6 h-6" />
-              <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Link>
             <Link
               to="/menu"
@@ -58,9 +63,11 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-4">
             <Link to="/cart" className="relative text-bosal-deep-green">
               <ShoppingCart className="w-6 h-6" />
-              <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -101,4 +108,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
