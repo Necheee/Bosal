@@ -11,7 +11,7 @@ const RestaurantIntro = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 relative h-[600px] rounded-2xl overflow-hidden"
+            className="order-2 lg:order-1 relative h-96 rounded-2xl overflow-hidden"
           >
             <img 
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" 

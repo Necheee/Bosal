@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-bosal-beige overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-bosal-beige overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="z-10 pt-12 lg:pt-0"
           >
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold text-bosal-deep-green leading-[1.1]">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold text-bosal-deep-green leading-tight">
               Taste the <br />
               <span className="text-bosal-bright-green italic">Culture.</span>
             </h1>
@@ -41,9 +41,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative h-[50vh] lg:h-[80vh] w-full"
+            className="relative h-96  w-full"
           >
-            <div className="absolute inset-0 rounded-[2rem] overflow-hidden">
+            <div className="absolute inset-0 rounded-3xl overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200" 
                 alt="Exquisite Nigerian Dish" 

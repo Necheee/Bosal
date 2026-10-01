@@ -18,7 +18,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-2xl overflow-hidden ${index === 0 || index === 3 ? 'md:col-span-2 md:row-span-2 h-64 md:h-[500px]' : 'h-40 md:h-[240px]'}`}
+              className={`relative rounded-2xl overflow-hidden ${index === 0 || index === 3 ? 'md:col-span-2 md:row-span-2 h-64 md:h-96' : 'h-40 md:h-64'}`}
             >
               <img 
                 src={src} 

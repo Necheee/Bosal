@@ -36,7 +36,7 @@ const Experience = () => {
             </ul>
           </motion.div>
 
-          <div className="lg:col-span-7 relative h-[600px] w-full">
+          <div className="lg:col-span-7 relative h-96  w-full">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
