@@ -17,10 +17,10 @@ Our goal is to build a complete, highly-polished, mobile-first frontend for Bosa
 - [x] **Phase 3: Menu Experience** - Implementation of the `/menu` route, complete with a responsive grid, real-time search, category filtering, and a food details modal with quantity selection.
 - [x] **Phase 4: Cart** - Global state management using Zustand, Add/Remove item logic, subtotal/total calculations, and a fully functional Cart UI with dynamic Navbar integration.
 - [x] **Phase 5: Checkout** - Guest checkout flow, Pickup/Delivery method selection, mock payment UI (Card & Transfer), dynamic delivery fee toggling, and animated order confirmation screen.
+- [x] **Phase 6: Auth & Accounts** - Login, signup, user profiles, order history tracking, and global auth store implementation.
 
 ### Upcoming Milestones
 
-- [ ] **Phase 6: Auth & Accounts** - Login, signup, user profiles, and order history tracking (with Guest checkout remaining the default flow).
 - [ ] **Phase 7: Admin Dashboard** - CMS views for orders, menu, customers, and reviews.
 - [ ] **Phase 8: Polish** - Accessibility audits, animation refinement, and edge-case testing.
 
