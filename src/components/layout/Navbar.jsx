@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
+import { ShoppingCart, Menu as MenuIcon, X, User } from 'lucide-react';
 import { useState } from 'react';
 import useCartStore from '../../store/cartStore';
+import useAuthStore from '../../store/authStore';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const items = useCartStore((state) => state.items);
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+  const user = useAuthStore((state) => state.user);
 
   const links = [
     { name: 'Home', path: '/' },
@@ -43,6 +45,9 @@ const Navbar = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-6">
+            <Link to={user ? "/profile" : "/login"} className="text-bosal-deep-green hover:text-bosal-bright-green transition-colors">
+              <User className="w-6 h-6" />
+            </Link>
             <Link to="/cart" className="relative text-bosal-deep-green hover:text-bosal-bright-green transition-colors">
               <ShoppingCart className="w-6 h-6" />
               {totalItems > 0 && (
@@ -61,6 +66,9 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-4">
+            <Link to={user ? "/profile" : "/login"} className="text-bosal-deep-green">
+              <User className="w-6 h-6" />
+            </Link>
             <Link to="/cart" className="relative text-bosal-deep-green">
               <ShoppingCart className="w-6 h-6" />
               {totalItems > 0 && (
