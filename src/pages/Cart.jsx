@@ -13,21 +13,26 @@ const Cart = () => {
   if (items.length === 0) {
     return (
       <div className="min-h-[70vh] bg-bosal-beige flex items-center justify-center pt-20 pb-20 px-4">
-        <div className="text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
           <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
             <ShoppingBag className="w-10 h-10 text-bosal-deep-green/30" />
           </div>
           <h2 className="text-3xl font-display font-bold text-bosal-deep-green mb-4">Your cart is empty</h2>
           <p className="text-bosal-deep-green/70 mb-8 max-w-md mx-auto">
-            Looks like you haven't added any delicious Nigerian dishes to your cart yet.
+            Looks like you haven't added any delicious Nigerian dishes to your cart yet. Let's fix that!
           </p>
           <Link 
             to="/menu"
-            className="inline-block bg-bosal-deep-green text-bosal-beige px-8 py-3 rounded-full font-medium hover:bg-bosal-bright-green transition-colors"
+            aria-label="Browse Menu"
+            className="inline-block bg-bosal-deep-green text-bosal-beige px-8 py-3 rounded-full font-medium hover:bg-bosal-bright-green transition-colors focus:ring-4 focus:ring-bosal-bright-green focus:outline-none"
           >
             Browse Menu
           </Link>
-        </div>
+        </motion.div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, CreditCard, Wallet, Truck, Store, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CreditCard, Wallet, Truck, Store, CheckCircle2, ShoppingCart } from 'lucide-react';
 import useCartStore from '../store/cartStore';
 
 const Checkout = () => {
@@ -18,14 +18,25 @@ const Checkout = () => {
   // If cart is empty and we haven't just succeeded, redirect or show empty state
   if (items.length === 0 && !isSuccess) {
     return (
-      <div className="min-h-screen bg-bosal-beige flex items-center justify-center pt-24 pb-20">
-        <div className="text-center">
+      <div className="min-h-screen bg-bosal-beige flex items-center justify-center pt-24 pb-20 px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
+          <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+            <ShoppingCart className="w-10 h-10 text-bosal-deep-green/30" />
+          </div>
           <h2 className="text-3xl font-display font-bold text-bosal-deep-green mb-4">Nothing to checkout</h2>
-          <p className="text-bosal-deep-green/70 mb-8 max-w-md mx-auto">Your cart is empty.</p>
-          <Link to="/menu" className="bg-bosal-deep-green text-bosal-beige px-8 py-3 rounded-full font-medium hover:bg-bosal-bright-green transition-colors">
+          <p className="text-bosal-deep-green/70 mb-8 max-w-md mx-auto">Looks like your cart is empty. Add some delicious meals before checking out!</p>
+          <Link 
+            to="/menu" 
+            aria-label="Back to Menu"
+            className="inline-block bg-bosal-deep-green text-bosal-beige px-8 py-3 rounded-full font-medium hover:bg-bosal-bright-green transition-colors focus:outline-none focus:ring-4 focus:ring-bosal-bright-green"
+          >
             Back to Menu
           </Link>
-        </div>
+        </motion.div>
       </div>
     );
   }
