@@ -8,7 +8,7 @@ Our goal is to build a complete, highly-polished, mobile-first frontend for Bosa
 
 ## 📍 Current Stage
 
-**We are currently at the beginning of Phase 7 (Admin Dashboard).**
+**We are currently at the beginning of Phase 8 (Polish).**
 
 ### Milestones Completed
 
@@ -21,7 +21,7 @@ Our goal is to build a complete, highly-polished, mobile-first frontend for Bosa
 
 ### Upcoming Milestones
 
-- [ ] **Phase 7: Admin Dashboard** - CMS views for orders, menu, customers, and reviews.
+- [x] **Phase 7: Admin Dashboard** - CMS views for orders, menu, customers, and analytics.
 - [ ] **Phase 8: Polish** - Accessibility audits, animation refinement, and edge-case testing.
 
 ---

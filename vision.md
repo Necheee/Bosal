@@ -61,7 +61,7 @@ Bosal Stores/Kitchen is a minimal, sophisticated, premium, and vibrant digital p
 - [x] **PHASE 4 — CART:** Add/remove items, quantity, subtotal, fixed delivery fee, total, Zustand state.
 - [x] **PHASE 5 — CHECKOUT:** Pickup/Delivery selection, guest checkout, customer info, order summary, provider-agnostic Payment UI, confirmation.
 - [x] **PHASE 6 — AUTHENTICATION & CUSTOMER ACCOUNT:** Login, signup, profile, order history (Guest checkout remains default).
-- [ ] **PHASE 7 — ADMIN:** Admin dashboard, orders, menu management, customers, reviews, gallery (mock data).
+- [x] **PHASE 7 — ADMIN:** Admin dashboard, orders, menu management, customers, reviews, gallery (mock data).
 - [ ] **PHASE 8 — POLISH & QUALITY:** Responsive polish across breakpoints, accessibility, loading/empty/error states, animation consistency, overall visual quality.
 
 ## 6. Development Rules
