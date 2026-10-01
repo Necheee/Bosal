@@ -45,41 +45,36 @@ const Navbar = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link to={user ? "/profile" : "/login"} className="text-bosal-deep-green hover:text-bosal-bright-green transition-colors">
+            <Link to={user ? "/profile" : "/login"} aria-label="User Profile" className="text-bosal-deep-green hover:text-bosal-bright-green transition-colors focus:outline-none focus:ring-2 focus:ring-bosal-bright-green rounded-full p-1">
               <User className="w-6 h-6" />
             </Link>
-            <Link to="/cart" className="relative text-bosal-deep-green hover:text-bosal-bright-green transition-colors">
+            <Link to="/cart" aria-label="Shopping Cart" className="relative text-bosal-deep-green hover:text-bosal-bright-green transition-colors focus:outline-none focus:ring-2 focus:ring-bosal-bright-green rounded-full p-1">
               <ShoppingCart className="w-6 h-6" />
               {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
-            </Link>
-            <Link
-              to="/menu"
-              className="bg-bosal-deep-green text-bosal-beige px-6 py-2 rounded-full font-medium hover:bg-bosal-bright-green transition-colors"
-            >
-              Order Now
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-4">
-            <Link to={user ? "/profile" : "/login"} className="text-bosal-deep-green">
+            <Link to={user ? "/profile" : "/login"} aria-label="User Profile" className="text-bosal-deep-green focus:outline-none focus:ring-2 focus:ring-bosal-bright-green rounded-full p-1">
               <User className="w-6 h-6" />
             </Link>
-            <Link to="/cart" className="relative text-bosal-deep-green">
+            <Link to="/cart" aria-label="Shopping Cart" className="relative text-bosal-deep-green focus:outline-none focus:ring-2 focus:ring-bosal-bright-green rounded-full p-1">
               <ShoppingCart className="w-6 h-6" />
               {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-bosal-bright-green text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-bosal-deep-green hover:text-bosal-bright-green focus:outline-none"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              className="text-bosal-deep-green hover:text-bosal-bright-green focus:outline-none focus:ring-2 focus:ring-bosal-bright-green rounded-lg p-1"
             >
               {isOpen ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
@@ -101,13 +96,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/menu"
-              onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 mt-4 text-center text-base font-medium bg-bosal-deep-green text-bosal-beige rounded-full hover:bg-bosal-bright-green"
-            >
-              Order Now
-            </Link>
           </div>
         </div>
       )}
