@@ -55,14 +55,14 @@ Bosal Stores/Kitchen is a minimal, sophisticated, premium, and vibrant digital p
 
 ## 5. Development Phases
 
-- **PHASE 1 — FOUNDATION:** Frontend structure, routing foundation, Tailwind setup, global styling, colour system, typography, responsive foundations, temporary logo, navigation, footer.
-- **PHASE 2 — BRAND & HOMEPAGE:** Editorial hero, featured dishes, intro, menu preview, restaurant experience, reviews, gallery, CTA.
-- **PHASE 3 — MENU EXPERIENCE:** Menu page, filtering, search, food grid/cards, food details, responsive interactions.
-- **PHASE 4 — CART:** Add/remove items, quantity, subtotal, fixed delivery fee, total, Zustand state.
-- **PHASE 5 — CHECKOUT:** Pickup/Delivery selection, guest checkout, customer info, order summary, provider-agnostic Payment UI, confirmation.
-- **PHASE 6 — AUTHENTICATION & CUSTOMER ACCOUNT:** Login, signup, profile, order history (Guest checkout remains default).
-- **PHASE 7 — ADMIN:** Admin dashboard, orders, menu management, customers, reviews, gallery (mock data).
-- **PHASE 8 — POLISH & QUALITY:** Responsive polish across breakpoints, accessibility, loading/empty/error states, animation consistency, overall visual quality.
+- [x] **PHASE 1 — FOUNDATION:** Frontend structure, routing foundation, Tailwind setup, global styling, colour system, typography, responsive foundations, temporary logo, navigation, footer.
+- [x] **PHASE 2 — BRAND & HOMEPAGE:** Editorial hero, featured dishes, intro, menu preview, restaurant experience, reviews, gallery, CTA.
+- [x] **PHASE 3 — MENU EXPERIENCE:** Menu page, filtering, search, food grid/cards, food details, responsive interactions.
+- [x] **PHASE 4 — CART:** Add/remove items, quantity, subtotal, fixed delivery fee, total, Zustand state.
+- [ ] **PHASE 5 — CHECKOUT:** Pickup/Delivery selection, guest checkout, customer info, order summary, provider-agnostic Payment UI, confirmation.
+- [ ] **PHASE 6 — AUTHENTICATION & CUSTOMER ACCOUNT:** Login, signup, profile, order history (Guest checkout remains default).
+- [ ] **PHASE 7 — ADMIN:** Admin dashboard, orders, menu management, customers, reviews, gallery (mock data).
+- [ ] **PHASE 8 — POLISH & QUALITY:** Responsive polish across breakpoints, accessibility, loading/empty/error states, animation consistency, overall visual quality.
 
 ## 6. Development Rules
 - **No unapproved changes:** Do not add major features, change user journeys, change visual direction, or introduce reservations/tracking without approval.

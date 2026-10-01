@@ -1,16 +1,41 @@
-# React + Vite
+# Bosal Stores/Kitchen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, sophisticated, premium, and vibrant digital presence for a Nigerian restaurant. Built with a mobile-first approach, this application serves as both an editorial showcase of the restaurant's culinary experience and a seamless online ordering platform.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **Routing:** React Router v6
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **State Management:** Zustand
 
-## React Compiler
+## 📦 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser and navigate to `http://localhost:5173`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📚 Project Documentation
+
+To understand the full scope, vision, and current status of the project, please review the following documents:
+
+- [vision.md](./vision.md) - The single source of truth for the product vision, scope, target audience, and architecture.
+- [PROGRESS.md](./PROGRESS.md) - A detailed breakdown of our current development stage, our end goals, and a log of technical struggles and their solutions.
+
+## 🤝 Contribution Guidelines
+When contributing, please ensure you read `PROGRESS.md` to understand our workarounds for specific editor linting issues and image hosting rules. Keep the git history logical by committing features in isolated, logical chunks.
