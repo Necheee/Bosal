@@ -41,11 +41,12 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative h-96  w-full"
+            className="relative h-80 sm:h-96 lg:h-[500px] w-full"
+            style={{ minHeight: '320px' }}
           >
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200" 
+                src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                 alt="Exquisite Nigerian Dish" 
                 className="w-full h-full object-cover"
               />

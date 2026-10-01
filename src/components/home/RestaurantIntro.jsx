@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 
 const RestaurantIntro = () => {
   return (
-    <section className="py-24 bg-bosal-deep-green text-bosal-beige">
+    <section className="py-16 lg:py-24 bg-bosal-deep-green text-bosal-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 relative h-96 rounded-2xl overflow-hidden"
+            className="order-2 lg:order-1 relative h-72 sm:h-96 rounded-2xl overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=800" 
               alt="Bosal Restaurant Interior" 
               className="w-full h-full object-cover"
             />

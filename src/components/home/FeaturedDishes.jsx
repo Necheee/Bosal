@@ -1,11 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { featuredDishes } from '../../data/mockData';
-import { Plus } from 'lucide-react';
+import { Plus, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import useCartStore from '../../store/cartStore';
+import { useState } from 'react';
 
 const FeaturedDishes = () => {
+  const { addToCart } = useCartStore();
+  const [showToast, setShowToast] = useState(false);
+
+  const handleAdd = (dish) => {
+    addToCart({ ...dish, quantity: 1 });
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
+  };
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex justify-between items-end mb-12">
@@ -46,7 +57,10 @@ const FeaturedDishes = () => {
                   {dish.description}
                 </p>
                 
-                <button className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white border border-bosal-deep-green/10 text-bosal-deep-green font-medium group-hover:bg-bosal-deep-green group-hover:text-bosal-beige group-hover:border-transparent transition-all duration-300">
+                <button 
+                  onClick={() => handleAdd(dish)}
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white border border-bosal-deep-green/10 text-bosal-deep-green font-medium hover:bg-bosal-deep-green hover:text-bosal-beige hover:border-transparent transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-bosal-bright-green/50"
+                >
                   <Plus className="w-4 h-4" /> Add to Order
                 </button>
               </div>
@@ -61,6 +75,21 @@ const FeaturedDishes = () => {
         </div>
 
       </div>
+
+      {/* Success Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-bosal-deep-green text-bosal-beige px-6 py-4 rounded-full shadow-2xl flex items-center gap-3"
+          >
+            <CheckCircle className="w-6 h-6 text-bosal-bright-green" />
+            <span className="font-medium whitespace-nowrap">Added to your cart successfully!</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
