@@ -11,6 +11,13 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 
+// Admin Components
+import AdminLayout from './components/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminOrders from './pages/admin/AdminOrders';
+import AdminMenu from './pages/admin/AdminMenu';
+import AdminCustomers from './pages/admin/AdminCustomers';
+
 function App() {
   return (
     <Router>
@@ -26,6 +33,14 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="profile" element={<Profile />} />
+        </Route>
+
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="orders" element={<AdminOrders />} />
+          <Route path="menu" element={<AdminMenu />} />
+          <Route path="customers" element={<AdminCustomers />} />
         </Route>
       </Routes>
     </Router>
