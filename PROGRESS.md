@@ -6,15 +6,15 @@ This document serves as a guide for collaborators to quickly understand where th
 Our goal is to build a complete, highly-polished, mobile-first frontend for Bosal Stores/Kitchen. The final product will feature a beautiful editorial-style homepage, a fully functional menu with search and filtering, a robust cart system, a guest checkout flow, and a mock admin dashboard. The entire frontend will be powered by structured mock data, ensuring it is 100% ready for backend integration in the future.
 
 ## 📍 Current Stage
-**We are currently at the beginning of Phase 4 (Cart System).**
+**We are currently at the beginning of Phase 5 (Checkout System).**
 
 ### Milestones Completed
 - [x] **Phase 1: Foundation** - Repository setup, routing scaffolding, Tailwind configuration, global styling, colour system, typography, Navbar, and Footer.
 - [x] **Phase 2: Brand & Homepage** - Implementation of the editorial Hero section, featured dishes, restaurant experience intro, customer reviews, and photo gallery.
 - [x] **Phase 3: Menu Experience** - Implementation of the `/menu` route, complete with a responsive grid, real-time search, category filtering, and a food details modal with quantity selection.
+- [x] **Phase 4: Cart** - Global state management using Zustand, Add/Remove item logic, subtotal/total calculations, and a fully functional Cart UI with dynamic Navbar integration.
 
 ### Upcoming Milestones
-- [ ] **Phase 4: Cart** - Global state management using Zustand, Add/Remove item logic, and subtotal calculations.
 - [ ] **Phase 5: Checkout** - Guest checkout flow, customer info forms, and payment UI mockups.
 - [ ] **Phase 6: Auth & Accounts** - Login, signup, and order history pages.
 - [ ] **Phase 7: Admin Dashboard** - CMS views for orders, menu, customers, and reviews.
